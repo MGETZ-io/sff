@@ -5,43 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maxims Startseite</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Orbitron', sans-serif;
             text-align: center;
-            background-color: #121212;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             color: white;
             margin: 0;
             padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         h1 {
-            margin-top: 50px;
+            font-size: 3em;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
         }
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 30px;
+            max-width: 600px;
         }
         .button {
             display: inline-block;
-            width: 150px;
+            width: 160px;
             padding: 15px;
-            margin: 10px;
+            margin: 12px;
             text-align: center;
             font-size: 18px;
             color: white;
-            background-color: #1e90ff;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
             text-decoration: none;
-            border-radius: 8px;
-            transition: 0.3s;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(255, 75, 43, 0.8);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: skewX(-30deg);
+            transition: all 0.5s;
+        }
+        .button:hover::before {
+            left: 100%;
         }
         .button:hover {
-            background-color: #ff4500;
+            box-shadow: 0 0 20px rgba(255, 75, 43, 1);
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <h1>Willkommen, Maxim!</h1>
+    <h1>🔥 Maxims Startseite 🔥</h1>
     <div class="container">
         <a href="https://www.youtube.com" class="button" target="_blank">YouTube</a>
         <a href="https://www.twitch.tv" class="button" target="_blank">Twitch</a>
